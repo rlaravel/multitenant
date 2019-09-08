@@ -48,8 +48,10 @@ class Database
         $data = [
             'server' => '127.0.0.1',
             'database' => $this->database,
-            'username' => $this->username,
-            'password' => $this->password,
+            // 'username' => $this->username,
+            'username' => config('tenant.config.username'),
+            // 'password' => $this->password,
+            'password' => config('tenant.config.password'),
         ];
 
         $data = $this->encrypt($data);
@@ -69,7 +71,7 @@ class Database
     private function create()
     {
         DB::statement("CREATE SCHEMA `{$this->database}` DEFAULT CHARACTER SET utf8 ;");
-        DB::statement("CREATE USER '{$this->username}'@'%' IDENTIFIED BY '{$this->password}' ;");
-        DB::statement("GRANT ALL PRIVILEGES ON {$this->database}.* TO '{$this->username}'@'%' ;");
+        // DB::statement("CREATE USER '{$this->username}'@'%' IDENTIFIED BY '{$this->password}' ;");
+        // DB::statement("GRANT ALL PRIVILEGES ON {$this->database}.* TO '{$this->username}'@'%' ;");
     }
 }

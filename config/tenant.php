@@ -22,4 +22,17 @@ return [
     |
     */
     'folder_migrations_tenant' => 'migrations_tenant',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Conexion
+    |--------------------------------------------------------------------------
+    |
+    | Configuración de la conexión
+    |
+    */
+    'config' => [
+        'username' => env('DB_USERNAME', 'forge'),
+        'password' => env('DB_PASSWORD', ''),
+    ],
 ];
