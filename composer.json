@@ -25,5 +25,6 @@
                 "MultiTenant": "RafaelMorenoJS\\MultiTenant\\Facades\\Database"
             }
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
