@@ -36,8 +36,8 @@ class Database
     {
         $time = date('U');
         $this->database = "db_{$time}";
-        $this->username = "user_{$time}";
-        $this->password = "pass_{$time}";
+        $this->username = config('tenant.config.username');
+        $this->password = config('tenant.config.password');
     }
 
     /**
@@ -48,10 +48,8 @@ class Database
         $data = [
             'server' => '127.0.0.1',
             'database' => $this->database,
-            // 'username' => $this->username,
-            'username' => config('tenant.config.username'),
-            // 'password' => $this->password,
-            'password' => config('tenant.config.password'),
+            'username' => $this->username,
+            'password' => $this->password,
         ];
 
         $data = $this->encrypt($data);
@@ -72,6 +70,6 @@ class Database
     {
         DB::statement("CREATE SCHEMA `{$this->database}` DEFAULT CHARACTER SET utf8 ;");
         // DB::statement("CREATE USER '{$this->username}'@'%' IDENTIFIED BY '{$this->password}' ;");
-        // DB::statement("GRANT ALL PRIVILEGES ON {$this->database}.* TO '{$this->username}'@'%' ;");
+        DB::statement("GRANT ALL PRIVILEGES ON {$this->database}.* TO '{$this->username}'@'%' ;");
     }
 }
