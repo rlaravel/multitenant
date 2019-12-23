@@ -16,6 +16,6 @@ class Database extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'tenant';
+        return 'rafaelmorenojs.tenant';
     }
 }

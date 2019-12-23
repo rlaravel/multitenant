@@ -1,13 +1,16 @@
 {
     "name": "rafaelmorenojs/multitenant",
-    "description": "Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema, es muy util para sistemas SASS como POS o helpdesk.",
+    "description": "Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema, es muy util para sistemas SAAS como POS o helpdesk.",
     "authors": [
         {
             "name": "Rafael Moreno",
             "email": "alejandro8924@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
     "require-dev": {
         "orchestra/testbench": "^3.8"
     },

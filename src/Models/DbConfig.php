@@ -5,6 +5,7 @@ namespace RafaelMorenoJS\MultiTenant\Models;
 use Illuminate\Database\Eloquent\Model;
 use RafaelMorenoJS\MultiTenant\Traits\ConnectDbConfig;
 use RafaelMorenoJS\MultiTenant\Traits\Crypt;
+use RafaelMorenoJS\MultiTenant\Traits\DbConfigurable;
 
 /**
  * Class DbConfig
@@ -17,7 +18,7 @@ use RafaelMorenoJS\MultiTenant\Traits\Crypt;
  */
 class DbConfig extends Model
 {
-    use ConnectDbConfig, Crypt;
+    use ConnectDbConfig, Crypt, DbConfigurable;
 
     /**
      * @var string

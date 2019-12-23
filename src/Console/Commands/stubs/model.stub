@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use RafaelMorenoJS\MultiTenant\Models\Model;
+use RafaelMorenoJS\MultiTenant\Traits\Observationable;
+
+/**
+ * Class DummyClass
+ * @package DummyNamespace
+ * @mixin \Eloquent
+ */
+class DummyClass extends Model
+{
+    use Observationable;
+}

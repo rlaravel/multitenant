@@ -19,7 +19,7 @@ class MultiTenantServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('tenant', function () {
+        $this->app->bind('rafaelmorenojs.tenant', function () {
             return new Database;
         });
     }
