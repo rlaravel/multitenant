@@ -52,7 +52,7 @@ trait ConnectDbConfig
 
             Artisan::call('migrate', [
                 '--database' => 'tenant',
-                '--path' => 'database/migrations_tenant'
+                '--path' => 'database/' . config('tenant.folder_migrations_tenant')
             ]);
         }
     }

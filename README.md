@@ -6,24 +6,27 @@ Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema,
 
     composer require rafaelmorenojs/multitenant
 
-#### Uso
+#### Configuración
 
-Publicamos la configuración y la migración
+Publicamos la configuración
 
     php artisan vendor:publish --provider="RafaelMorenoJS\MultiTenant\Providers\MultiTenantServiceProvider"
 
-#### Configuración
+`crypt_pass`: Es el password que usaremos para encriptar la información de conexión la base de datos del inquilino.
 
-**crypt_pass**: Es el password que usaremos para encriptar la información de conexión la base de datos del inquilino.
+`folder_models_tenant`: En este directorio se guardaran todos los modelos que registre. Ejemplo: `\App\Tenant`.
 
-**folder_models_tenant**: En este directorio se guardaran todos los modelos que registre. Ejemplo: `\App\Tenant`.
+`folder_migrations_tenant`: En este directorio se guardaran todas las migraciones que registre.
 
-**folder_migrations_tenant**: En este directorio se guardaran todas las migraciones que registre.
+`config.username`: Es el usuario que usará la base de datos del inquilino.
 
-**config.username**: Es el usuario que usará la base de datos del inquilino.
+`config.password`: Es el password que usará la base de datos del inquilino.
 
-**config.password**: Es el password que usará la base de datos del inquilino.
+Publicamos la migración
 
+    php artisan migrate
+
+### Uso
 
 #### Comandos
 

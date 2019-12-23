@@ -27,7 +27,8 @@ class Models extends Command
      *
      * @var string
      */
-    protected $signature = 'tenant:model {model}';
+    protected $signature = 'tenant:model {model : Nombre del modelo}
+                                         {--O|observation : Si queremos que use la tabla observations para guardar estos registros}';
 
     /**
      * The console command description.
@@ -60,7 +61,7 @@ class Models extends Command
 
         $this->directoryExist();
         $this->createModel($name);
-        $this->createMigration(strtolower(Str::plural($name)));
+        $this->createMigration($name);
     }
 
     /**
@@ -69,9 +70,25 @@ class Models extends Command
      */
     private function createModel(string $name)
     {
-        Artisan::call('make:model', [
-            'name' => "Models/{$this->folderModelTenant}/{$name}"
+        /*
+        $this->call('make:model', [
+            'name' => "Models/{$this->folderModelTenant}/{$name}",
         ]);
+
+        $this->info(Artisan::output());
+        */
+
+        $modelTemplate = str_replace("DummyClass", $name, $this->getStub());
+        $modelTemplate = str_replace("DummyNamespace", "App\Models\\{$this->folderModelTenant}", $modelTemplate);
+
+        if (!$this->option('observation')) {
+            $modelTemplate = str_replace("use RafaelMorenoJS\MultiTenant\Traits\Observationable;", "", $modelTemplate);
+            $modelTemplate = str_replace("use Observationable;", "//", $modelTemplate);
+        }
+
+        file_put_contents("app/Models/{$this->folderModelTenant}/{$name}.php", $modelTemplate);
+
+        $this->info("Se ha credo el modelo App\Models\\{$this->folderModelTenant}\\{$name}");
     }
 
     /**
@@ -80,11 +97,15 @@ class Models extends Command
      */
     private function createMigration(string $name)
     {
-        Artisan::call('make:migration', [
+        $name = Str::snake(Str::pluralStudly(class_basename($name)));
+
+        $this->call('make:migration', [
             'name' => "create_{$name}_table",
             '--path' => "database/{$this->folderMigrationTenant}",
             '--create'=> $name
         ]);
+
+        $this->info(Artisan::output());
     }
 
     /**
@@ -97,5 +118,14 @@ class Models extends Command
         if (!is_dir($path)) {
             mkdir($path);
         }
+    }
+
+    /**
+     * @param $type
+     * @return false|string
+     */
+    protected function getStub()
+    {
+        return file_get_contents(__DIR__ . "/stubs/model.stub");
     }
 }
