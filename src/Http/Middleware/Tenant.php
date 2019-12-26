@@ -5,6 +5,10 @@ namespace RafaelMorenoJS\MultiTenant\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Class Tenant
+ * @package RafaelMorenoJS\MultiTenant\Http\Middleware
+ */
 class Tenant
 {
     /**
