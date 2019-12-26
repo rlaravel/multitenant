@@ -3,6 +3,8 @@
 namespace RafaelMorenoJS\MultiTenant\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use RafaelMorenoJS\MultiTenant\Console\Commands\Migrate;
+use RafaelMorenoJS\MultiTenant\Console\Commands\Migration;
 use RafaelMorenoJS\MultiTenant\Console\Commands\Models;
 use RafaelMorenoJS\MultiTenant\Database;
 
@@ -42,7 +44,9 @@ class MultiTenantServiceProvider extends ServiceProvider
             ], 'migrations');
 
             $this->commands([
-                Models::class
+                Models::class,
+                Migration::class,
+                Migrate::class
             ]);
         }
     }
