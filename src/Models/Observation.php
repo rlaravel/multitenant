@@ -1,6 +1,6 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Models;
+namespace MorenoRafael\MultiTenant\Models;
 
 /**
  * Class Observation

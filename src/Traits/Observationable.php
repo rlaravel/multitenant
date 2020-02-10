@@ -1,12 +1,12 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Traits;
+namespace MorenoRafael\MultiTenant\Traits;
 
-use RafaelMorenoJS\MultiTenant\Models\Observation;
+use MorenoRafael\MultiTenant\Models\Observation;
 
 /**
  * Trait Observationable
- * @package RafaelMorenoJS\MultiTenant\Traits
+ * @package MorenoRafael\MultiTenant\Traits
  * @property-read \App\Models\Tenant\Observation|\Illuminate\Support\Collection $observations
  */
 trait Observationable

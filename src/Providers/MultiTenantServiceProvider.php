@@ -1,16 +1,16 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Providers;
+namespace MorenoRafael\MultiTenant\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use RafaelMorenoJS\MultiTenant\Console\Commands\Migrate;
-use RafaelMorenoJS\MultiTenant\Console\Commands\Migration;
-use RafaelMorenoJS\MultiTenant\Console\Commands\Models;
-use RafaelMorenoJS\MultiTenant\Database;
+use MorenoRafael\MultiTenant\Console\Commands\Migrate;
+use MorenoRafael\MultiTenant\Console\Commands\Migration;
+use MorenoRafael\MultiTenant\Console\Commands\Models;
+use MorenoRafael\MultiTenant\Database;
 
 /**
  * Class MultiTenantServiceProvider
- * @package RafaelMorenoJS\MultiTenant\Providers
+ * @package MorenoRafael\MultiTenant\Providers
  */
 class MultiTenantServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,7 @@ class MultiTenantServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('rafaelmorenojs.tenant', function () {
+        $this->app->bind('MorenoRafael.tenant', function () {
             return new Database;
         });
     }

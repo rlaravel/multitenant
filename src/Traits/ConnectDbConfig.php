@@ -1,6 +1,6 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Traits;
+namespace MorenoRafael\MultiTenant\Traits;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
 
 /**
  * Trait ConnectDbConfig
- * @package RafaelMorenoJS\MultiTenant\Traits
+ * @package MorenoRafael\MultiTenant\Traits
  */
 trait ConnectDbConfig
 {

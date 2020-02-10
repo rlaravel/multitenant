@@ -1,13 +1,13 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Http\Middleware;
+namespace MorenoRafael\MultiTenant\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Tenant
- * @package RafaelMorenoJS\MultiTenant\Http\Middleware
+ * @package MorenoRafael\MultiTenant\Http\Middleware
  */
 class Tenant
 {

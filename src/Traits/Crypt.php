@@ -1,10 +1,10 @@
 <?php
 
-namespace RafaelMorenoJS\MultiTenant\Traits;
+namespace MorenoRafael\MultiTenant\Traits;
 
 /**
  * Trait Crypt
- * @package RafaelMorenoJS\MultiTenant\Traits
+ * @package MorenoRafael\MultiTenant\Traits
  */
 trait Crypt
 {
