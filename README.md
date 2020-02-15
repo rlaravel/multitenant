@@ -4,7 +4,7 @@ Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema,
 
 ## Instalación
 
-    composer require MorenoRafael/multitenant
+    composer require morenorafael/multitenant
 
 #### Configuración
 
