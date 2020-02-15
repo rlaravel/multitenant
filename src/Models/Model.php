@@ -16,8 +16,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 abstract class Model extends ModelLaravel
 {
-    use SoftDeletes;
-
     /**
      * @var string
      */
