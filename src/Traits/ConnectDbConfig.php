@@ -34,11 +34,11 @@ trait ConnectDbConfig
     protected $password;
 
     /**
-     *
+     * @param string|null $config
      */
-    public function connect()
+    public function connect(string $config = null)
     {
-        if (!$this->connected()) {
+        if (!$this->connected($config)) {
             DB::purge('tenant');
 
             Config::set('database.connections.tenant.host', $this->server);
@@ -58,11 +58,12 @@ trait ConnectDbConfig
     }
 
     /**
+     * @param string|null $config
      * @return bool
      */
-    private function connected()
+    private function connected(string $config = null)
     {
-        $data = $this->decrypt($this->config);
+        $data = $this->decrypt(($config ?? $this->config));
 
         $this->server = $data['server'];
         $this->database = $data['database'];
