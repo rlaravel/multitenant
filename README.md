@@ -4,13 +4,17 @@ Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema,
 
 ## Instalación
 
-    composer require rlaravel/multitenant
+```sh
+$ composer require rlaravel/multitenant
+```
 
 #### Configuración
 
 Publicamos la configuración
 
-    php artisan vendor:publish --provider="RLaravel\MultiTenant\Providers\MultiTenantServiceProvider"
+```sh
+$ php artisan vendor:publish --provider="RLaravel\MultiTenant\Providers\MultiTenantServiceProvider"
+```
 
 `crypt_pass`: Es el password que usaremos para encriptar la información de conexión la base de datos del inquilino.
 
@@ -24,7 +28,9 @@ Publicamos la configuración
 
 Publicamos la migración
 
-    php artisan migrate
+```sh
+$ php artisan migrate
+```
 
 ### Uso
 
@@ -32,6 +38,8 @@ Publicamos la migración
 
 Para crear un modelo en la base de datos tenant:
 
-    php artisan tenant:model Person
+```sh
+$ php artisan tenant:model Person
+```
 
 automaticamente nos creara un modelo en en diretorio de los modelos inquilinos.
