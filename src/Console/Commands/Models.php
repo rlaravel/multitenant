@@ -1,6 +1,6 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Console\Commands;
+namespace RLaravel\MultiTenant\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 /**
  * Class Models
- * @package MorenoRafael\MultiTenant\Commands
+ * @package RLaravel\MultiTenant\Commands
  */
 class Models extends Command
 {
@@ -82,7 +82,7 @@ class Models extends Command
         $modelTemplate = str_replace("DummyNamespace", "App\Models\\{$this->folderModelTenant}", $modelTemplate);
 
         if (!$this->option('observation')) {
-            $modelTemplate = str_replace("use MorenoRafael\MultiTenant\Traits\Observationable;", "", $modelTemplate);
+            $modelTemplate = str_replace("use RLaravel\MultiTenant\Traits\Observationable;", "", $modelTemplate);
             $modelTemplate = str_replace("use Observationable;", "//", $modelTemplate);
         }
 

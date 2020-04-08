@@ -1,14 +1,14 @@
 <?php
 
-namespace MorenoRafael\MultiTenant;
+namespace RLaravel\MultiTenant;
 
 use Illuminate\Support\Facades\DB;
-use MorenoRafael\MultiTenant\Models\DbConfig;
-use MorenoRafael\MultiTenant\Traits\Crypt;
+use RLaravel\MultiTenant\Models\DbConfig;
+use RLaravel\MultiTenant\Traits\Crypt;
 
 /**
  * Class Database
- * @package MorenoRafael\MultiTenant
+ * @package RLaravel\MultiTenant
  */
 class Database
 {

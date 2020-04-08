@@ -1,11 +1,11 @@
 {
-    "name": "morenorafael/multitenant",
+    "name": "rlaravel/multitenant",
     "description": "Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema, es muy util para sistemas SAAS como POS o helpdesk.",
     "license": "MIT",
     "authors": [
         {
             "name": "Rafael Moreno",
-            "email": "alejandro8924@gmail.com"
+            "email": "rlaravel1@gmail.com"
         }
     ],
     "require": {
@@ -17,16 +17,16 @@
     },
     "autoload": {
         "psr-4": {
-            "MorenoRafael\\MultiTenant\\": "src/"
+            "RLaravel\\MultiTenant\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MorenoRafael\\MultiTenant\\Providers\\MultiTenantServiceProvider"
+                "RLaravel\\MultiTenant\\Providers\\MultiTenantServiceProvider"
             ],
             "aliases": {
-                "MultiTenant": "MorenoRafael\\MultiTenant\\Facades\\Database"
+                "MultiTenant": "RLaravel\\MultiTenant\\Facades\\Database"
             }
         }
     },

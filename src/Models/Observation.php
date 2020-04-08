@@ -1,6 +1,6 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Models;
+namespace RLaravel\MultiTenant\Models;
 
 /**
  * Class Observation

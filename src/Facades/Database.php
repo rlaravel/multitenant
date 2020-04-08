@@ -1,12 +1,12 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Facades;
+namespace RLaravel\MultiTenant\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Database
- * @package MorenoRafael\MultiTenant\Facades
+ * @package RLaravel\MultiTenant\Facades
  * @method static \Illuminate\Database\Eloquent\Model saveConfig()
  */
 class Database extends Facade
@@ -16,6 +16,6 @@ class Database extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'MorenoRafael.tenant';
+        return 'RLaravel.tenant';
     }
 }

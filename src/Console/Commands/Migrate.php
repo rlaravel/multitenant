@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MorenoRafael\MultiTenant\Console\Commands;
+namespace RLaravel\MultiTenant\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Schema;
 
 /**
  * Class Migrate
- * @package MorenoRafael\MultiTenant\Console\Commands
+ * @package RLaravel\MultiTenant\Console\Commands
  */
 class Migrate extends Command
 {

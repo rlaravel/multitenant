@@ -1,10 +1,10 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Traits;
+namespace RLaravel\MultiTenant\Traits;
 
 /**
  * Trait Crypt
- * @package MorenoRafael\MultiTenant\Traits
+ * @package RLaravel\MultiTenant\Traits
  */
 trait Crypt
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Models;
+namespace RLaravel\MultiTenant\Models;
 
 use Illuminate\Database\Eloquent\Model as ModelLaravel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Model
- * @package MorenoRafael\MultiTenant\Models
+ * @package RLaravel\MultiTenant\Models
  * @property-read int $id
  * @property-read \Carbon\Carbon $created_at
  * @property-read \Carbon\Carbon $updated_at

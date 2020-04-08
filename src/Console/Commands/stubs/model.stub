@@ -2,8 +2,8 @@
 
 namespace DummyNamespace;
 
-use MorenoRafael\MultiTenant\Models\Model;
-use MorenoRafael\MultiTenant\Traits\Observationable;
+use RLaravel\MultiTenant\Models\Model;
+use RLaravel\MultiTenant\Traits\Observationable;
 
 /**
  * Class DummyClass

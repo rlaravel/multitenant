@@ -1,13 +1,13 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Traits;
+namespace RLaravel\MultiTenant\Traits;
 
-use MorenoRafael\MultiTenant\Models\DbConfig;
+use RLaravel\MultiTenant\Models\DbConfig;
 
 /**
  * Trait DbConfigurable
- * @package MorenoRafael\MultiTenant\Models
- * @property-read \MorenoRafael\MultiTenant\Models\DbConfig $config
+ * @package RLaravel\MultiTenant\Models
+ * @property-read \RLaravel\MultiTenant\Models\DbConfig $config
  * @mixin \Eloquent
  */
 trait DbConfigurable

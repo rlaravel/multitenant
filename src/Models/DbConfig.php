@@ -1,15 +1,15 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Models;
+namespace RLaravel\MultiTenant\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use MorenoRafael\MultiTenant\Traits\ConnectDbConfig;
-use MorenoRafael\MultiTenant\Traits\Crypt;
-use MorenoRafael\MultiTenant\Traits\DbConfigurable;
+use RLaravel\MultiTenant\Traits\ConnectDbConfig;
+use RLaravel\MultiTenant\Traits\Crypt;
+use RLaravel\MultiTenant\Traits\DbConfigurable;
 
 /**
  * Class DbConfig
- * @package MorenoRafael\MultiTenant\Models
+ * @package RLaravel\MultiTenant\Models
  * @property-read int $id
  * @property string $config
  * @property-read \Carbon\Carbon $created_at

@@ -1,13 +1,13 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Http\Middleware;
+namespace RLaravel\MultiTenant\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Tenant
- * @package MorenoRafael\MultiTenant\Http\Middleware
+ * @package RLaravel\MultiTenant\Http\Middleware
  */
 class Tenant
 {

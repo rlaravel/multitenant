@@ -1,13 +1,13 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Console\Commands;
+namespace RLaravel\MultiTenant\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
 /**
  * Class Migration
- * @package MorenoRafael\MultiTenant\Console\Commands
+ * @package RLaravel\MultiTenant\Console\Commands
  */
 class Migration extends Command
 {

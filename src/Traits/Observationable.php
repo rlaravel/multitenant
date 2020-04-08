@@ -1,12 +1,12 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Traits;
+namespace RLaravel\MultiTenant\Traits;
 
-use MorenoRafael\MultiTenant\Models\Observation;
+use RLaravel\MultiTenant\Models\Observation;
 
 /**
  * Trait Observationable
- * @package MorenoRafael\MultiTenant\Traits
+ * @package RLaravel\MultiTenant\Traits
  * @property-read \App\Models\Tenant\Observation|\Illuminate\Support\Collection $observations
  */
 trait Observationable

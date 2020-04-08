@@ -1,16 +1,16 @@
 <?php
 
-namespace MorenoRafael\MultiTenant\Providers;
+namespace RLaravel\MultiTenant\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use MorenoRafael\MultiTenant\Console\Commands\Migrate;
-use MorenoRafael\MultiTenant\Console\Commands\Migration;
-use MorenoRafael\MultiTenant\Console\Commands\Models;
-use MorenoRafael\MultiTenant\Database;
+use RLaravel\MultiTenant\Console\Commands\Migrate;
+use RLaravel\MultiTenant\Console\Commands\Migration;
+use RLaravel\MultiTenant\Console\Commands\Models;
+use RLaravel\MultiTenant\Database;
 
 /**
  * Class MultiTenantServiceProvider
- * @package MorenoRafael\MultiTenant\Providers
+ * @package RLaravel\MultiTenant\Providers
  */
 class MultiTenantServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,7 @@ class MultiTenantServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('MorenoRafael.tenant', function () {
+        $this->app->bind('RLaravel.tenant', function () {
             return new Database;
         });
     }

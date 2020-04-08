@@ -4,13 +4,13 @@ Este paquete nos permite crear bases de datos y gestionarlas en un solo sistema,
 
 ## Instalación
 
-    composer require morenorafael/multitenant
+    composer require rlaravel/multitenant
 
 #### Configuración
 
 Publicamos la configuración
 
-    php artisan vendor:publish --provider="MorenoRafael\MultiTenant\Providers\MultiTenantServiceProvider"
+    php artisan vendor:publish --provider="RLaravel\MultiTenant\Providers\MultiTenantServiceProvider"
 
 `crypt_pass`: Es el password que usaremos para encriptar la información de conexión la base de datos del inquilino.
 
